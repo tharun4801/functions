@@ -22,3 +22,29 @@ OUTPUT:
 enter the value of x: 3
 enter the value of y: 4
 sum: 7
+#default parameters/func occupied parameters
+def hi(name='doremon'):
+    print("Hello",name)
+hi()
+hi("gopi")
+OUTPUT:
+Hello doremon
+Hello gopi
+4
+'''write a function that carries and returns all the arthmetic operations to the main code(+,-,*)
+pass the constraints,where all the constrants must be caliculated accordingly as return values and print
+the calicu;ated by calling the same function'''
+def arthamtic(a,b):
+    A=a+b
+    S=a-b
+    M=a*b
+    return A,S,M
+x=int(input("enter the value of x:"))
+y=int(input("enter the value of y:"))
+result=arthamtic(x,y)
+print(arthamtic(x,y))
+OUTPUT:
+enter the value of x: 4
+enter the value of y: 5
+(9, -1, 20)
+
