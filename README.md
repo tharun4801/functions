@@ -38,13 +38,11 @@ def arthamtic(a,b):
     A=a+b
     S=a-b
     M=a*b
-    return A,S,M
+    return f"sum:{A},diff:{S},mul:{M}"
 x=int(input("enter the value of x:"))
 y=int(input("enter the value of y:"))
-result=arthamtic(x,y)
 print(arthamtic(x,y))
 OUTPUT:
 enter the value of x: 4
-enter the value of y: 5
-(9, -1, 20)
-
+enter the value of y: 6
+sum:10,diff:-2,mul:24
