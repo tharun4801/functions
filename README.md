@@ -46,3 +46,34 @@ OUTPUT:
 enter the value of x: 4
 enter the value of y: 6
 sum:10,diff:-2,mul:24
+
+#functions with parameters/return values
+def add(a,b):
+    return a+b
+student1=int(input("enter the money of student1:"))
+student2=int(input("enter the money of student2:"))
+total=add(student1,student2)
+print("total amount of two students:",total)
+OUTPUT:
+enter the money of student1: 20
+enter the money of student2: 30
+total amount of two students: 50
+
+def add(student1,student2):
+    print("total:",student1+student2)
+student1=int(input("enter the money:"))
+student2=int(input("enter the money:"))
+add(student1,student2)
+OUTPUT:
+enter the money: 20
+enter the money: 30
+total: 50
+
+def get_name():
+    name=input("enter the name:")
+    return name
+username=get_name()
+print("WELCOME",username)
+OUTPUT:
+enter the name: Santhosh
+WELCOME Santhosh
