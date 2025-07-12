@@ -183,3 +183,28 @@ locally 32
 x=  100
 latest value of y globally: 15
 globally 115
+
+total=0
+def add_subject_marks():
+    global total
+    marks=int(input("enter the marks of a subject:"))
+    total+=marks
+    return marks
+print("subject1 marks :",add_subject_marks())
+print("subject2 marks :",add_subject_marks())
+print("subject3 marks :",add_subject_marks())
+print("subject4 marks :",add_subject_marks())
+print("subject5 marks :",add_subject_marks())
+print("total marks stored in golbal:",total)
+OUTPUT:
+enter the marks of a subject: 97
+subject1 marks : 97
+enter the marks of a subject: 98
+subject2 marks : 98
+enter the marks of a subject: 93
+subject3 marks : 93
+enter the marks of a subject: 94
+subject4 marks : 94
+enter the marks of a subject: 92
+subject5 marks : 92
+total marks stored in golbal: 474
