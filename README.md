@@ -96,3 +96,90 @@ OUTPUT:
 enter the number as space separated:  44 56 77 2 8 66 999
 even count: 5
 odd count: 2
+
+#functions within functions
+def outer():
+    print("this is a outer function .......")
+    def inner():
+        print("this is a inner function .......")
+    inner()
+outer()
+OUTPUT:
+this is a outer function .......
+this is a inner function .......
+
+def cal(a,b):
+    def add():
+        return a+b
+    def sub():
+        return a-b
+    def mul():
+        return a*b
+    def div():
+        return a/b if b!=0 else "cannot divide by zero" 
+    print("Addition",add())
+    print("Subtraction",sub())
+    print("Product",mul())
+    print("Division",div())
+a=eval(input("enter the number:"))
+b=eval(input("enter the number:"))
+cal(a,b)
+OUTPUT:
+enter the number: 0
+enter the number: 60
+Addition 60
+Subtraction -60
+Product 0
+Division 0.0
+
+def mul_by(n):
+    def inner(x):
+        return x*n
+    return inner
+times_2=mul_by(2)
+times_3=mul_by(3)
+print(times_2(10))
+print(times_3(15))
+OUTPUT:
+20
+45
+
+def greet(text):
+    def inner(name):
+        return f"{text},{name}!!!!!"
+    return inner
+hi=greet('Hello')
+print(hi('santhosh'))
+OUTPUT:
+Hello,santhosh!!!!!
+
+def titled(title):
+    def greet(name):
+        return f"Hello,{title}{name}"
+    return greet
+mr_greet=titled("Mr.")
+dr_greet=titled("Dr.")
+print(mr_greet("santhosh"))
+print(dr_greet("Naga Venkata Rajesh"))
+OUTPUT:
+Hello,Mr.santhosh
+Hello,Dr.Naga Venkata Rajesh
+
+x=100
+y=10
+def display():
+    x=22
+    print("x= ",x)
+    print("locally",x+y)
+display()
+print("x= ",x)
+y=10
+y=15
+print("latest value of y globally:",y)
+print("globally",x+y)
+OUTPUT:
+x=  22
+locally 32
+x=  100
+latest value of y globally: 15
+globally 115
