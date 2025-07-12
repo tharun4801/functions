@@ -208,3 +208,28 @@ subject4 marks : 94
 enter the marks of a subject: 92
 subject5 marks : 92
 total marks stored in golbal: 474
+
+subject_marks=[]
+def add_subject_marks():
+    mark=int(input("enter the,marksfor a subject:"))
+    subject_marks.append(mark)
+    return mark
+print("Subject 1 marks:",add_subject_marks())
+print("Subject 2 marks:",add_subject_marks())
+print("Subject 3 marks:",add_subject_marks())
+print("All subject marks",subject_marks)
+total=sum(subject_marks)
+l=len(subject_marks)
+avg=total/l
+print("Total marks",total)
+print("average",avg)
+OUTPUT:
+enter the,marksfor a subject: 90
+Subject 1 marks: 90
+enter the,marksfor a subject: 90
+Subject 2 marks: 90
+enter the,marksfor a subject: 90
+Subject 3 marks: 90
+All subject marks [90, 90, 90]
+Total marks 270
+average 90.0
