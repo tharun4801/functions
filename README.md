@@ -233,3 +233,21 @@ Subject 3 marks: 90
 All subject marks [90, 90, 90]
 Total marks 270
 average 90.0
+
+#global variables
+fact=1
+def factorial(n):
+    global fact
+    fact=1
+    for i in range(1,n+1):
+        fact*=i
+    return fact
+num=int(input("enter a number"))
+if num<0:
+    print("cannot derive factorial for negative number")
+else:
+    factorial(num)
+    print(f"Factorial of {num} is {factorial(num)}")
+OUTPUT:
+enter a number 5
+Factorial of 5 is 120
